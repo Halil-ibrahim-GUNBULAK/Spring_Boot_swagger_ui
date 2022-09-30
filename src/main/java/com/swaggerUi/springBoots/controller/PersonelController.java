@@ -30,6 +30,7 @@ public class PersonelController {
     @ApiOperation(value = "New person adding method")
     public ResponseEntity<Person> save(@RequestBody Person user) {
         personalList.add(user);
+        System.out.println("New Person added");
         return ResponseEntity.ok(user);
     }
 
@@ -40,7 +41,7 @@ public class PersonelController {
     }
 
     @PutMapping("{personalId}")
-    @ApiOperation(value = "Update person method")
+    @ApiOperation(value = "Update person method just update ısUserActive  true or false")
     public ResponseEntity<Person> updateEmployee(@PathVariable int personalId,@RequestBody Person personDetail) {
         Person updateEmployee;
         try{
@@ -50,10 +51,6 @@ public class PersonelController {
             return (ResponseEntity<Person>) ResponseEntity.notFound();
         }
 
-        updateEmployee.setFirstName(personDetail.getFirstName());
-        updateEmployee.setLastName(personDetail.getLastName());
-        updateEmployee.setUserName(personDetail.getUserName());
-        updateEmployee.setEmailAddress(personDetail.getEmailAddress());
         updateEmployee.setIsUserActive(personDetail.getIsUserActive());
 
 

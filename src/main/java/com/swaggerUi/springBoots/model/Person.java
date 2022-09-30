@@ -33,7 +33,6 @@ public class Person {
 
     @ApiModelProperty(value = "Date field of user object")
     private Date date;
-
     @ApiModelProperty(value = "Is the user still working")
     private Boolean isUserActive;
 
