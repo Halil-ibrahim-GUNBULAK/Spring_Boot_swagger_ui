@@ -1,4 +1,4 @@
-# springBoots
+# Spring boot adding swagger ui
 Add swagger ui spring boot project
 
 last step
